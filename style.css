@@ -1,0 +1,74 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+/* Área do Quiz */
+#area-quiz{
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center
+}
+/* Área da pergunta */
+#area-question{
+    margin: 10px 10px 10px 0;
+    padding: 10px 10px 10px 0;
+    width: 500px;
+}
+
+#question{
+    text-align: start;
+    margin: 0 0 0 10px;
+}
+/* Área da resposta  */
+
+#area-answer{
+    width: 500px;
+
+}
+.area-label{
+    display: flex;
+    width: 500px;
+}
+.answer{
+    cursor: pointer;
+    width: 100%;
+    margin-bottom: 10px;
+    padding: 10px;
+    text-align: start;
+    color: black;
+    background-color: rgb(212, 212, 212);
+}
+.answer:hover{
+    background-color: rgb(224, 223, 223);
+    transition: 300ms;
+}
+
+.input{
+    position: absolute;
+    clip: rect(0,0,0,0);
+}
+.input:checked + .answer {
+    background-color: rgb(185, 185, 185);
+}
+
+
+#area-button{
+    margin: 10px;
+    padding: 10px;
+    width: 500px;
+}
+#next{
+    float: right;
+    margin-left: 10px;
+}
+#previous{
+    float: right;
+}
+
+
+/* Área do resultado */
+#area-result{
+    
+}
