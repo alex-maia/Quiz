@@ -8,7 +8,11 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center
+    align-items: center;
+    max-height: 60vh;
+}
+#area-alert{
+    width: 510px;
 }
 /* Área da pergunta */
 #area-question{
@@ -25,7 +29,6 @@
 
 #area-answer{
     width: 500px;
-
 }
 .area-label{
     display: flex;
@@ -70,5 +73,8 @@
 
 /* Área do resultado */
 #area-result{
-    
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }

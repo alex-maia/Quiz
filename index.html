@@ -9,8 +9,9 @@
     <title>Quiz</title>
 </head>
 <body>
-
+    
     <div id="area-quiz">
+        <div id="area-alert"></div>
         <div id="area-question">
             <h3 id="question"> </h3>
         </div>
@@ -18,14 +19,17 @@
             
         </div>
         <div id="area-button">
-            <button id="submit" class="uk-button uk-button-primary uk-margin-right">Obter resultados</button>
+            <button id="submit" class="uk-button uk-button-primary uk-margin-right" onclick="result()">Obter resultados</button>
             <button id="next" onclick="nextQuestion()" class="uk-button uk-button-default">Próximo</button>
-            <button id="previous" onclick="previousQuestion()" class="uk-button uk-button-default" style="display: none;">Anterior</button>
+            <!-- <button id="previous" onclick="previousQuestion()" class="uk-button uk-button-default" style="display: none;">Anterior</button> -->
         </div>
     </div>
     <div id="area-result">
         <h3 id="result"></h3>
+        <button id="reset" class="uk-button uk-button-secondary" onclick="initialize()">Recomeçar</button>
     </div>
+    <script src="https://cdn.jsdelivr.net/npm/uikit@3.15.24/dist/js/uikit.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/uikit@3.15.24/dist/js/uikit-icons.min.js"></script> 
     <script src="script.js"></script>
 </body>
 </html>
