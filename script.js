@@ -63,6 +63,7 @@ var myQuestions = [
   var next = document.getElementById('next');
   var resetbutton = document.getElementById('reset'); 
   var radioButtons = document.getElementsByName('answer-quiz');
+  var progress = document.getElementById('progressBar');
   var points = 0
   var counterQuestions = 0;
   var valueQuiz='';
@@ -70,11 +71,12 @@ var myQuestions = [
   initialize()
 
     function initialize(){
+      progress.value += 0;
       areaAnswer.innerHTML = '';
       document.getElementById('result').innerHTML = ""
       resetbutton.style.display = "none";
       next.style.display = "block";
-      counterQuestions = 0 
+      counterQuestions = 0;      
       areaQuestion.innerHTML = myQuestions[counterQuestions].question;
       let size = Object.keys(myQuestions[counterQuestions].answers).length;
       let entries = Object.entries(myQuestions[counterQuestions].answers)
@@ -88,6 +90,7 @@ var myQuestions = [
           if(radioButtons[x].checked){
             myQuestions[counterQuestions].response = radioButtons[x].value;
             counterQuestions += 1;
+            progress.value += 100/myQuestions.length;
             if(counterQuestions < myQuestions.length-1){
               // previous.style.display = "block";
               areaQuestion.innerHTML = myQuestions[counterQuestions].question;
@@ -118,6 +121,7 @@ var myQuestions = [
 
         function result(){
           document.getElementById('result').innerHTML = ""
+          progress.value += 100/myQuestions.length;
           for (let x = 0; x < radioButtons.length; x++) {
             if(radioButtons[x].checked){
               myQuestions[counterQuestions].response = radioButtons[x].value;
@@ -130,7 +134,7 @@ var myQuestions = [
               points = points + 100/myQuestions.length;
             }
           }
-          document.getElementById('result').innerHTML += "Obtiveste uma pontuação de: "+points+" %"
+          document.getElementById('result').innerHTML += "Obtiveste uma pontuação de: "+points+"%"
           resetbutton.style.display = "block";
           points = 0;
         }
