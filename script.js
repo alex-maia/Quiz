@@ -71,7 +71,7 @@ var myQuestions = [
   initialize()
 
     function initialize(){
-      progress.value += 0;
+      progress.value = 0;
       areaAnswer.innerHTML = '';
       document.getElementById('result').innerHTML = ""
       resetbutton.style.display = "none";
